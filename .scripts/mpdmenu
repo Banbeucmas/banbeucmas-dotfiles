@@ -1,0 +1,3 @@
+#!/bin/bash
+
+xst -n xst-ncmpcpp -g 90x40 -e zsh -c "ncmpcpp &&"
