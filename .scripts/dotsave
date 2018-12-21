@@ -3,6 +3,7 @@
 rsync -P -r --exclude 'chromium' --exclude 'discord'  ~/.config/ /mnt/Workspace/Dotfiles/.config
 rsync -P ~/.zshrc /mnt/Workspace/Dotfiles
 rsync -P ~/.vimrc /mnt/Workspace/Dotfiles
+rsync -P ~/.Xresources /mnt/Workspace/Dotfiles
 rsync -P -r ~/.toys /mnt/Workspace/Dotfiles
 rsync -P -r ~/.scripts /mnt/Workspace/Dotfiles
 rsync -P -r ~/Pictures/Wallpapers /mnt/Workspace/Dotfiles/

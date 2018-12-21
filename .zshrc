@@ -15,3 +15,5 @@ PROMPT='%F{9}%n%f@%f%m%f %F{9}%1~%f '
 
 alias toys="~/.scripts/toys"
 alias showoff="~/.scripts/showoff"
+alias savedot="~/.scripts/dotsave"
+alias refresh="source ~/.zshrc"

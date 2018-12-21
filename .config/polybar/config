@@ -66,7 +66,7 @@ wm-restack = bspwm
 
 [bar/top_mid]
 monitor = eDP1
-width = 14.5%
+width = 16%
 height = ${variables.bar_height}
 offset-y = 7
 offset-x = 610
@@ -75,7 +75,7 @@ bottom = false
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-font-0 = "scientifica:size=9:style=Regular;1"
+font-0 = "t cherry Wide:size=13:style=Regular;1"
 font-1 = "InconsolataGo Nerd Font Mono:size=20:style=Regular;4"
 font-2 = "Inconsolata Nerd Font Mono:size=20:style=Medium;4"
 
@@ -85,7 +85,7 @@ wm-restack = bspwm
 
 [bar/top_left]
 monitor = eDP1
-width = 27%
+width = 29%
 height = ${variables.bar_height}
 offset-y = 7
 offset-x = 14
@@ -106,7 +106,7 @@ padding-right=0
 module-margin-left = 0
 module-margin-right = 0
 
-font-0 = "scientifica:size=9:style=Regular;1"
+font-0 = "t cherry Wide:size=12:style=Regular;1"
 font-1 = "InconsolataGo Nerd Font Mono:size=20:style=Regular;4"
 font-2 = "Inconsolata Nerd Font Mono:size=20:style=Medium;4"
 font-3 = "Inconsolata Nerd Font Mono:size=5:style=Medium;4"
@@ -188,7 +188,7 @@ label-urgent-padding = 1
 
 label-empty = %icon%
 label-empty-background = ${colors.background}
-label-empty-foreground = ${colors.foreground-alt}
+label-empty-foreground = ${colors.background-alt}
 label-empty-padding = 1
 
 ; Separator in between workspaces
