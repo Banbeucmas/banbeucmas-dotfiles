@@ -1,2 +1,12 @@
 .config/VirtualBox
 .config/GIMP
+.config/Code
+.config/Thunar
+.config/autostart
+.config/dconf
+.config/deluge
+.config/enchant
+.config/gedit
+.config/gpick
+.config/xfce4
+.config/xfce4-session
