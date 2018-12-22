@@ -5,7 +5,7 @@ Contrary to the creation of this dotfile. https://github.com/Banbeucmas/Banbeucm
 
 ## Changes
 
-These changes below are after 22/12/2018. Previous changes to this please visit my old Repository which I hosted up there.
+These changes below are after 22/12/2018. Previous changes to this please visit my old Repository which I mentioned up there.
 
 ### Christmas with ReiMari 2018
 Information about system and wallpaper can be found [here](https://github.com/Banbeucmas/banbeucmas-dotfiles/blob/master/Rice%20Information/Reimu%20Marisa%20Christmas%20Poprication%202018.md).
