@@ -1,7 +1,7 @@
 # Screenshot
 ![ReiMari Christmas Poprication 2018](https://github.com/Banbeucmas/banbeucmas-dotfiles/raw/master/Screenshot/Screenshot_2018-12-22_06-14-21.png)
 
-#Information
+# Information
 * Wallpaper: [Original](https://github.com/Banbeucmas/banbeucmas-dotfiles/blob/master/Wallpapers/ReiMari_Poprication_Original.png) & [Edit ver 1](https://github.com/Banbeucmas/banbeucmas-dotfiles/blob/master/Wallpapers/ReiMari_Poprication_Wallpaper.png) & [Edit ver 2](https://github.com/Banbeucmas/banbeucmas-dotfiles/blob/master/Wallpapers/ReiMari_Poprication_Wallpaper_with_ribbons.png)
 * Walpaper artist: [@benisyakedon](https://twitter.com/benisyakedon) or Poprication for circle name. [He is going to C95, support him by buying his work](https://twitter.com/benisyakedon/status/1071224990022852609)
 * Bar used: Polybar
