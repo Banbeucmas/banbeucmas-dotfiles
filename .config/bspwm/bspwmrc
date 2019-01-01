@@ -27,6 +27,7 @@ bspc rule -a Krita desktop='^7'
 bspc rule -a "Minecraft 1.12.2" desktop='^8'
 bspc rule -a "Minecraft 1.13.1" desktop='^8'
 bspc rule -a mplayer2 state=floating
+bspc rule -a "osu!" state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 

@@ -1,4 +1,4 @@
-st.font: t cherry:pixelsize=13:antialias=true:autohint=true;
+st.font: t cherry:pixelsize=13:antialias=false:autohint=true;
 
 st.shell: /bin/zsh
 
