@@ -1,1 +1,24 @@
-/home/banbeucmas/.Xresources
+st.font: t cherry:pixelsize=13:antialias=false:autohint=true;
+
+st.shell: /bin/zsh
+
+st.background: #262626
+st.foreground: #ebdbb2
+st.color0: #282828
+st.color1: #ad1d37
+st.color2: #19753e
+st.color3: #c29810
+st.color4: #000f46
+st.color5: #542a8c
+st.color6: #4a7cbf
+st.color7: #ffffff
+st.color8: #928374
+st.color9: #e8323b
+st.color10: #7a962f
+st.color11: #f5ed4c
+st.color12: #323e6a
+st.color13: #7321e2
+st.color14: #9ebbe1
+st.color15: #ebdbb2
+
+

@@ -1,0 +1,415 @@
+;==========================================================
+;
+;
+;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
+;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
+;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
+;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+;
+;
+;   To learn more about how to configure Polybar
+;   go to https://github.com/jaagr/polybar
+;
+;   The README contains alot of information
+;
+;==========================================================
+
+[colors]
+;background = ${xrdb:color0:#222}
+background = #b11e24
+background-alt = #e8323e
+;foreground = ${xrdb:color7:#222}
+foreground = #dfdfdf
+foreground-alt = #555
+white = #fff
+primary = #ffb52a
+secondary = #e60053
+alert = #bd2c40
+underline = #ec7285
+
+[variables]
+bar_height=25
+
+[bar/top_right]
+monitor = eDP1
+width = 17.55%
+height = ${variables.bar_height}
+offset-y = 7
+offset-x = 1113
+fixed-center = false
+bottom = false
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 0
+line-color = #eee
+
+border-size = 0
+border-color = #00000000
+
+padding-left=0
+padding-right=0
+module-margin-left = 0
+module-margin-right = 0
+
+font-0 = "scientifica:size=11:style=Bold;1"
+font-1 = "InconsolataGo Nerd Font Mono:size=20:style=Regular;4"
+font-2 = "Inconsolata Nerd Font Mono:size=20:style=Medium;4"
+
+modules-left = bspwm
+
+tray-scale = 1.0
+wm-restack = bspwm
+
+
+[bar/top_mid]
+monitor = eDP1
+width = 16%
+height = ${variables.bar_height}
+offset-y = 7
+offset-x = 610
+fixed-center = true
+bottom = false
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+font-0 = "t cherry Wide:size=13:style=Regular;1"
+font-1 = "InconsolataGo Nerd Font Mono:size=20:style=Regular;4"
+font-2 = "Inconsolata Nerd Font Mono:size=20:style=Medium;4"
+
+modules-center = date
+
+wm-restack = bspwm
+
+[bar/top_left]
+monitor = eDP1
+width = 29%
+height = ${variables.bar_height}
+offset-y = 7
+offset-x = 14
+fixed-center = false
+bottom = false
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+interval = 1
+line-size = 0
+line-color = #eee
+
+border-size = 0
+border-color = #00000000
+
+padding-left=0
+padding-right=0
+module-margin-left = 0
+module-margin-right = 0
+
+font-0 = "t cherry Wide:size=12:style=Regular;1"
+font-1 = "InconsolataGo Nerd Font Mono:size=20:style=Regular;4"
+font-2 = "Inconsolata Nerd Font Mono:size=20:style=Medium;4"
+font-3 = "Inconsolata Nerd Font Mono:size=5:style=Medium;4"
+font-4 = "Noto Sans CJK JP:size=8:antialias=false;1"
+
+
+modules-left = battery xbacklight pulseaudio mpd
+
+tray-scale = 1.0
+wm-restack = bspwm
+
+[module/memory]
+type = internal/memory
+interval = 3
+
+format = <label>
+format-padding = 0 
+label = "  %gb_used%/%gb_total%   %gb_swap_used%/%gb_swap_total% "
+label-underline = ${colors.underline}
+
+[module/cpu]
+type = internal/cpu
+interval = 3
+
+format = <label>
+format-padding = 0
+format-underline = ${colors.underline}
+
+label = " %percentage%%/100% "
+
+[module/xwindow]
+type = internal/xwindow
+format = <label>
+format-prefix = 
+format-prefix-font=10
+format-prefix-foreground = ${colors.foreground}
+format-background=${colors.background}
+format-padding = 1
+label = "%title% "
+label-font= 1
+label-foreground = ${colors.foreground}
+label-maxlen = 35
+label-empty = "(´・◡・｀) (ノToT)ノ ┻━━━━━━━┻ (´・◡・｀)"
+label-empty-foreground = ${colors.foreground}
+label-padding-left = 1
+label-empty-padding-left = 1
+
+[module/bspwm]
+type = internal/bspwm
+
+pin-workspaces = false
+
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;ﭮ
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+ws-icon-6 = 7;
+ws-icon-7 = 8;
+ws-icon-8 = 9;
+ws-icon-9 = 10;
+
+label-focused = %icon% 
+label-focused-background = ${colors.background-alt}
+label-focused-foreground = ${colors.white}
+label-focused-underline= ${colors.underline}
+label-focused-padding = 1
+
+label-occupied = %icon%
+label-occupied-background = ${colors.background}
+label-occupied-foreground = ${colors.white}
+label-occupied-padding = 1
+
+
+label-urgent = %icon%
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 1
+
+label-empty = %icon%
+label-empty-background = ${colors.background}
+label-empty-foreground = ${colors.background-alt}
+label-empty-padding = 1
+
+; Separator in between workspaces
+; label-separator = |
+
+[module/xbacklight]
+type = internal/xbacklight
+
+format = <label>
+format-background = ${colors.background-alt}
+label =  %percentage%%
+label-padding = 0
+label-underline = ${colors.underline}
+
+bar-width = 10
+bar-indicator = |
+bar-indicator-foreground = #fff
+bar-indicator-font = 2
+bar-fill = ─
+bar-fill-font = 2
+bar-fill-foreground = #9f78e1
+bar-empty = ─
+bar-empty-font = 2
+bar-empty-foreground = ${colors.foreground-alt}
+
+[module/wlan]
+type = internal/network
+interface = wlp2s0
+interval = 3.0
+
+format-connected-padding = 1
+format-connected = <ramp-signal> <label-connected>
+format-connected-underline = ${colors.underline}
+label-connected = 
+
+format-disconnected =  <label-disconnected>
+format-disconnected-underline = ${colors.underline}
+format-disconnected-padding = 1
+label-disconnected = 
+label-disconnected-foreground = ${colors.foreground-alt}
+
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
+ramp-signal-foreground = ${colors.white}
+
+[module/eth]
+type = internal/network
+interface = enp3s0
+interval = 3.0
+
+format-connected-underline = ${colors.underline}
+format-connected = %{A1:xfce4-terminal -e nmtui:} <label-connected>%{A} 
+format-connected-foreground = ${colors.white}
+format-connected-padding = 0
+label-connected = 
+
+format-disconnected =  <label-disconnected>
+format-disconnected-foreground = ${colors.foreground-alt}
+format-disconnected-underline = ${colors.underline}
+format-disconnected-padding = 0
+label-disconnected = 
+
+[module/date]
+type = internal/date
+interval = 5
+
+label-background = ${colors.background}
+label-foreground = ${colors.foreground}
+
+date = %A, %d %B %Y
+time = %H:%M
+
+
+label = %date% %time% 
+
+format-padding = 1
+
+[module/pulseaudio]
+type = internal/pulseaudio
+
+;format-volume = <label-volume> <bar-volume>
+format-volume-background = ${colors.background-alt}
+format-volume = <label-volume>
+format-volume-padding = 1
+format-volume-underline = ${colors.underline}
+label-volume =  %percentage%%
+label-volume-foreground = ${root.foreground}
+
+label-muted =  Muted
+format-muted-padding = 1
+format-muted-underline = ${colors.underline}
+label-muted-foreground = #666
+
+bar-volume-width = 5
+bar-volume-foreground-0 = #55aa55
+bar-volume-foreground-1 = #55aa55
+bar-volume-foreground-2 = #55aa55
+bar-volume-foreground-3 = #55aa55
+bar-volume-foreground-4 = #55aa55
+bar-volume-foreground-5 = #f5a70a
+bar-volume-foreground-6 = #ff5555
+bar-volume-gradient = false
+bar-volume-indicator = |
+bar-volume-indicator-font = 2
+bar-volume-fill = ─
+bar-volume-fill-font = 2
+bar-volume-empty = ─
+bar-volume-empty-font = 2
+bar-volume-empty-foreground = ${colors.foreground-alt}
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = AC
+full-at = 99
+
+format-charging = <animation-charging> <label-charging>
+format-charging-underline = ${colors.underline}
+format-charging-background = ${colors.background-alt}
+
+
+format-discharging = <animation-discharging> <label-discharging>
+format-discharging-underline = ${colors.underline}
+format-discharging-background = ${colors.background-alt}
+
+
+format-full-prefix = " "
+format-full-prefix-foreground = ${colors.white}
+format-full-underline = ${colors.underline}
+format-full-background = ${colors.background-alt}
+
+
+format-full-padding = 1
+format-discharging-padding = 1
+format-charging-padding = 1
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-foreground = ${colors.white}
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-foreground = ${colors.white}
+animation-charging-framerate = 750
+
+animation-discharging-0 = 
+animation-discharging-1 = 
+animation-discharging-2 = 
+animation-discharging-3 = 
+animation-discharging-foreground = ${colors.white}
+animation-discharging-framerate = 750
+
+[module/menu]
+type = custom/menu
+
+expand-right = false
+
+format-padding = 1
+format-background = ${colors.underline}
+format-foreground = ${colors.underline}
+
+label-open = ⏻
+label-open-foreground = ${colors.foreground}
+label-close = 
+label-close-padding = 1
+label-close-background = ${colors.underline}
+label-close-foreground = ${colors.foreground}
+label-separator = " | "
+label-seperator-background = ${colors.underline}
+label-separator-foreground = ${colors.foreground}
+
+menu-0-0 = Logout
+menu-0-0-background = ${colors.underline}
+menu-0-0-foreground = ${colors.foreground}
+menu-0-0-exec = xfce4-session-logout
+menu-0-0-padding-right = 1
+
+[module/mpd]
+type = internal/mpd
+
+; Host where mpd is running (either ip or domain name)
+; Can also be the full path to a unix socket where mpd is running.
+host = 127.0.0.1
+port = 6600
+
+; Seconds to sleep between progressbar/song timer sync
+; Default: 1
+interval = 1
+
+format-online = <label-time><label-song>
+format-online-padding = 1
+format-online-background= ${colors.background}
+format-stopped = "No song playing " 
+format-stopped-foreground = ${colors.foreground}
+format-stopped-background = ${colors.background}
+
+label-song-foreground = ${colors.white}
+label-song-padding = 1
+label-song = "%artist% - %title:0:9:...%"
+
+format-offline = <label-offline>
+label-offline = "Music Player Daemon is dead T_T %{T8}%{A}"
+
+label-time = %elapsed%/%total%
+
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+
+[global/wm]
+margin-top = 5
+margin-bottom = 5
+
+; vim:ft=dosini
