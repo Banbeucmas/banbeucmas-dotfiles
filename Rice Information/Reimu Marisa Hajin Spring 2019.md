@@ -2,6 +2,7 @@
 ![Spring is still cold, how about some ReiMari](https://github.com/Banbeucmas/banbeucmas-dotfiles/blob/master/Screenshot/Screenshot_2019-01-20_21-57-25.png)
 
 # Information
+* This is the current dotfile I am using, just clone it
 * Wallpaper: [Original](https://github.com/Banbeucmas/banbeucmas-dotfiles/blob/master/Wallpapers/Hajin_Reimu_Marisa.png) & [Cropped version](https://github.com/Banbeucmas/banbeucmas-dotfiles/blob/master/Wallpapers/Hajin_Reimu_Marisa_Cropped.png)
 * Walpaper artist: [@Hajin](https://twitter.com/magus_night_). [Pixiv link](https://www.pixiv.net/member_illust.php?id=6584502)
 * OS: Arch Linux
