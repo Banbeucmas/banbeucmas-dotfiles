@@ -2,23 +2,29 @@ st.font: t cherry:pixelsize=13:antialias=false:autohint=true;
 
 st.shell: /bin/zsh
 
-st.background: #262626
-st.foreground: #ebdbb2
-st.color0: #282828
-st.color1: #ad1d37
-st.color2: #19753e
+st.background: #383c4a
+st.foreground: #dfdfdf
+st.color0: #4b5262
+st.color1: #be616b
+st.color2: #a3bd8d
 st.color3: #c29810
-st.color4: #000f46
-st.color5: #542a8c
-st.color6: #4a7cbf
+st.color4: #4a7cbf
+st.color5: #ec7285
+st.color6: #88d0ba
 st.color7: #ffffff
-st.color8: #928374
-st.color9: #e8323b
-st.color10: #7a962f
+st.color8: #434a5a
+st.color9: #b2555f
+st.color10: #93ad7d
 st.color11: #f5ed4c
-st.color12: #323e6a
-st.color13: #7321e2
-st.color14: #9ebbe1
+st.color12: #7091b0
+st.color13: #ffc6cf
+st.color14: #7dbaa8
 st.color15: #ebdbb2
+st.color16: #404552
+st.color17: #7c818c
 
+polybar.background: #383c4a
+polybar.background-alt: #4b5162
+polybar.foreground: #dfdfdf
+polybar.foreground-alt: #555
 

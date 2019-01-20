@@ -18,14 +18,47 @@ set ruler
 
 " Turn on syntax highlighting.
 syntax on
-colorscheme gruvbox
-set background=dark
-let g:gruvbox_contrast_dark = 'soft'
-let g:airline_theme='base16'
-let g:gruvbox_italic=1
-let g:gruvbox_number_column='bg1'
 
-set number
+set laststatus=2
+
+if !has('gui_running')
+  set t_Co=256
+endif
+
+let s:p = { 'normal': {}, 'insert': {}, 'replace': {}, 'visual': {}, 'tabline': {} , 'inactive': {} }
+let s:p.normal = {
+            \    'left': [ [ '#ffffff', '#5f875f'], [ '#c5c8c6', '#282a2e'] ],
+            \    'right':  [ [ '#ffffff', '#5f875f'], [ '#c5c8c6', '#282a2e'] ],
+            \    'middle':  [ ['#bcbcbc', '#373b41', '' ] ],
+            \ }
+
+let s:p.insert = {
+            \   'left': [ [ '#ffffff', '#456887'], s:p.normal.left[1] ],
+            \    'right':  [ [ '#ffffff', '#456887'], s:p.normal.left[1] ],
+            \ }
+let s:p.replace = {
+            \    'left':  [ [ '#ffffff', '#5f5f87'], s:p.normal.left[1] ],
+            \    'right':  [ [ '#ffffff', '#5f5f87'], s:p.normal.left[1] ],
+            \ }
+
+let s:p.visual = {
+            \    'left': [ [ '#ffffff', '#cc6666'], s:p.normal.left[1] ],
+            \    'right': [ [ '#ffffff', '#cc6666'], s:p.normal.left[1] ],
+            \ }
+
+let s:p.tabline = {
+            \    'left': [ [ '#bcbcbc', '#282a2e'] ],
+            \    'middle': s:p.normal.middle,
+            \    'tabsel':  [ [ '#ffffff', '#5f875f'] ],
+            \ }
+
+let s:p.inactive = {
+            \    'left': [ ['#707880', '#303030'] ],
+            \    'right': [ ['#707880', '#303030'] ],
+            \ }
+
+let g:lightline#colorscheme#hybridmodified#palette = lightline#colorscheme#fill(s:p)
+let g:lightline = { 'colorscheme': 'hybridmodified' }
 
 
 " Turn off modelines
@@ -39,6 +72,9 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 set noshiftround
+
+" Remove unecessary stuff 
+set noshowmode
 
 " Ignore case when searching
 set ignorecase
@@ -70,6 +106,10 @@ set matchpairs+=<:>
 "set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
 
 " Show line numbers
+set number
+highlight LineNr ctermfg=black
+
+
 
 " Encoding
 set encoding=utf-8

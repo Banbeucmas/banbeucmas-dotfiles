@@ -11,7 +11,9 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-PROMPT='%F{9}%n%f@%f%m%f %F{9}%1~%f '
+export TERM=xterm-256color
+
+PROMPT='%F{12}%n%f@%f%m%f %F{12}%1~%f '
 
 alias toys="~/.scripts/toys"
 alias showoff="~/.scripts/showoff"

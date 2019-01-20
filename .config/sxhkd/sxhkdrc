@@ -8,10 +8,10 @@ alt + shift + Return
 
 # program launcher
 alt + d
-	rofi -show drun -theme gruvbox-dark-soft -font "t cherry 9" 
+	rofi -show drun -font "t cherry 9" 
 
 alt + a
-    rofi -show ssh -theme gruvbox-dark-soft -font "t cherry 9"
+    rofi -show ssh -font "t cherry 9"
 
 
 # make sxhkd reload its configuration files:
