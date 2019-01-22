@@ -20,3 +20,5 @@ alias showoff="~/.scripts/showoff"
 alias savedot="~/.scripts/dotsave"
 alias refresh="source ~/.zshrc"
 alias update="yay -Syu"
+
+#alias $DOT_CONFIG ="/mnt/Storages_Linux/Dotfiles/.config"

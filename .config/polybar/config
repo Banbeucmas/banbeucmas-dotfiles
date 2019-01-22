@@ -35,41 +35,11 @@ mpd_host=127.0.0.1
 mpd_port=6600
 
 [bar/bar]
-monitor = eDP1
-width = 100%
-height = ${variables.bar_height}
-offset-y = 0
-offset-x = 0
-fixed-center = true
-bottom = false
-background = ${colors.background}
-foreground = ${colors.foreground}
+include-file = /mnt/Storages_Linux/Dotfiles/.config/polybar/bars/main_bar
 
-line-size = 0
-line-color = #eee
+[bar/sub_bar]
+include-file = /mnt/Storages_Linux/Dotfiles/.config/polybar/bars/sub_bar
 
-;border-size-top = 1
-;border-size-left = 1
-;border-color-top = #fff
-;border-color-left = #fff
-
-
-padding-left=0
-padding-right=0
-module-margin-left = 0
-module-margin-right = 0
-
-font-0 = "t cherry Wide:size=13:style=Regular;1"
-font-1 = "InconsolataGo Nerd Font Mono:size=14:style=Regular;2"
-font-2 = "InconsolataGo Nerd Font Mono:size=18:style=Regular;2"
-font-3 = "Noto Sans CJK JP:size=8:antialias=false;1"
-
-modules-left = battery xbacklight pulseaudio updates mpd
-modules-center = username
-modules-right = hour date background-alt bspwm  
-
-tray-scale = 1.0
-wm-restack = bspwm
 
 [module/background-alt]
 type = custom/text
@@ -82,7 +52,7 @@ content = "banbeucmas@hakureishrine"
 
 [module/bspwm]
 type = internal/bspwm
-pin-workspaces = false
+pin-workspaces = true
 
 ws-icon-0 = 1;ﱡ
 ws-icon-1 = 2;ﱡ
@@ -241,6 +211,18 @@ label-song-foreground = ${colors.white}
 label-song = "ﱘ %artist% - %title:0:30:...%"
 
 label-offline = "ﱘ MPD is dead T_T"
+
+[module/cpu]
+type = internal/cpu
+
+; Seconds to sleep between updates
+; Default: 1
+interval = 0.5
+format = <label>
+
+label =  %%percentage%
+label-background = ${colors.background-alt}
+label-padding-right = 1
 
 [settings]
 screenchange-reload = true

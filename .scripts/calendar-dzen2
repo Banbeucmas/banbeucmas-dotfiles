@@ -52,7 +52,7 @@ echo  "$out" | dzen2 \
   -title-name "calendar" \
   -bg "$color5" \
   -fg "$color0" \
-  -x "-240" \
+  -x "-190" \
   -y 45 \
   -h 30 \
   -l $((lines-1)) \
