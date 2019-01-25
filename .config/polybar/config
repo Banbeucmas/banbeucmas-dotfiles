@@ -50,6 +50,18 @@ content-background = ${colors.background-alt}
 type = custom/text
 content = "banbeucmas@hakureishrine"
 
+[module/ram]
+type = internal/memory
+
+; Seconds to sleep between updates
+; Default: 1
+interval = 3
+format = <label>
+
+label =  %gb_used%/%gb_total%
+label-background = ${colors.background-alt}
+label-padding-right = 1
+
 [module/bspwm]
 type = internal/bspwm
 pin-workspaces = true
@@ -67,22 +79,26 @@ ws-icon-9 = 10;ﱡ
 format = <label-state>
 
 label-focused =ﱢ
+label-focused-font = 3
 label-focused-background = ${colors.background-alt}
 label-focused-foreground = 	#eee
 label-focused-underline= ${colors.underline}
 label-focused-padding-right = 1
 
 label-occupied =ﱢ
+label-occupied-font = 3
 label-occupied-background = ${colors.background-alt}
 label-occupied-foreground = #8a9cad
 label-occupied-padding-right = 1
 
 
 label-urgent = %icon%
+label-urgent-font = 3
 label-urgent-background = ${colors.alert}
 label-urgent-padding-right = 1
 
 label-empty = %icon%
+label-empty-font = 3
 label-empty-background = ${colors.background-alt}
 label-empty-foreground = #eee
 label-empty-padding-right = 1
@@ -91,6 +107,18 @@ label-empty-padding-right = 1
 type = custom/script
 exec = /mnt/Storages_Linux/Dotfiles/.config/polybar/scripts/updates_arch.sh
 interval = 600
+format-background = ${colors.background-alt}
+
+[module/github]
+type = custom/script
+exec = /mnt/Storages_Linux/Dotfiles/.config/polybar/scripts/github_notifications.sh
+interval = 60
+format-background = ${colors.background-alt}
+
+[module/reddit]
+type = custom/script
+exec = /mnt/Storages_Linux/Dotfiles/.config/polybar/scripts/reddit_notifications.sh
+interval = 60
 format-background = ${colors.background-alt}
 
 [module/xbacklight]
@@ -223,6 +251,40 @@ format = <label>
 label =  %%percentage%
 label-background = ${colors.background-alt}
 label-padding-right = 1
+
+
+[module/wireless-network]
+type = internal/network
+interface = wlp2s0
+
+interval = 3.0
+
+format-connected = <label-connected>
+format-disconnected = <label-disconnected>
+format-connected-background = ${colors.background-alt}
+format-disconnected-background = ${colors.background-alt}
+
+label-connected = 直 %local_ip%
+label-connected-padding-left = 1
+label-disconnected = 直 No connection
+label-disconnected-padding-left = 1
+
+
+[module/wired-network]
+type = internal/network
+interface = enp3s0
+
+interval = 3.0
+
+format-connected = <label-connected>
+format-disconnected = <label-disconnected>
+format-connected-background = ${colors.background-alt}
+format-disconnected-background = ${colors.background-alt}
+
+label-connected =  %local_ip%
+label-connected-padding = 1
+label-disconnected =  No connection
+label-disconnected-padding = 1
 
 [settings]
 screenchange-reload = true

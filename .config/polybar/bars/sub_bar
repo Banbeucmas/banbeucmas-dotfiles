@@ -9,7 +9,9 @@ background = ${colors.background}
 foreground = ${colors.foreground}
 
 font-0 = "t cherry Wide:size=13:style=Regular;1"
-font-1 = "InconsolataGo Nerd Font Mono:size=14:style=Regular;2"
+font-1 = "InconsolataGo Nerd Font Mono:size=16:style=Regular;2"
 font-2 = "InconsolataGo Nerd Font Mono:size=18:style=Regular;2"
 
-modules-left = background-alt cpu
+modules-left = background-alt ram cpu 
+modules-center = reddit github
+modules-right = wireless-network wired-network

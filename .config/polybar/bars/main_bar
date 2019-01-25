@@ -23,8 +23,8 @@ module-margin-left = 0
 module-margin-right = 0
 
 font-0 = "t cherry Wide:size=13:style=Regular;1"
-font-1 = "InconsolataGo Nerd Font Mono:size=14:style=Regular;2"
-font-2 = "InconsolataGo Nerd Font Mono:size=18:style=Regular;2"
+font-1 = "InconsolataGo Nerd Font Mono:size=18:style=Regular;3"
+font-2 = "InconsolataGo Nerd Font Mono:size=14:style=Regular;2"
 font-3 = "Noto Sans CJK JP:size=8:antialias=false;1"
 
 modules-left = battery xbacklight pulseaudio updates mpd
