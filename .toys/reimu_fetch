@@ -8,7 +8,7 @@ initializeANSI()
   esc=""
  
   blackf="${esc}[38;5;232m";   redf="${esc}[38;5;196m";    greenf="${esc}[32m"
-  yellowf="${esc}[33m"   bluef="${esc}[34m";   purplef="${esc}[38;5;203m"
+  yellowf="${esc}[33m"   bluef="${esc}[34m";   purplef="${esc}[38;5;216m"
   brownf="${esc}[38;5;130m";    whitef="${esc}[37m"; humanf="${esc}[38;5;223m"
  
   redt="${esc}[31m";
