@@ -6,71 +6,59 @@
 initializeANSI()
 {
   esc=""
- 
-  blackf="${esc}[38;5;232m";   redf="${esc}[38;5;196m";    greenf="${esc}[32m"
-  yellowf="${esc}[33m"   bluef="${esc}[34m";   purplef="${esc}[38;5;216m"
-  brownf="${esc}[38;5;130m";    whitef="${esc}[37m"; humanf="${esc}[38;5;223m"
- 
-  redt="${esc}[31m";
+  reset="${esc}[0m"
 
-  blackb="${esc}[38;5;241m";   redb="${esc}[41m";    greenb="${esc}[42m"
-  yellowb="${esc}[43m"   blueb="${esc}[44m";   purpleb="${esc}[45m"
-  brownb="${esc}[38;5;214m";    whiteb="${esc}[47m"; humanb="${esc}[38;5;229m"
- 
+  border="${esc}[38;5;232m"
+  greyd="${esc}[38;5;234m"; grey="${esc}[38;5;235m"; greyl="${esc}[38;5;240m"
+  red="${esc}[38;5;160m";    redd="${esc}[38;5;124m"
+  whited="${esc}[38;5;251m"; white="${esc}[38;5;255m"
+  humand="${esc}[38;5;216m"; human="${esc}[38;5;223m"; humanb="${esc}[38;5;229m"
+  yellowd="${esc}[38;5;214m"; yellow="${esc}[38;5;226m" 
+  brown="${esc}[38;5;130m"; brownb="${esc}[38;5;214m";  
+  eyed="${esc}[38;5;251m"; eye="${esc}[38;5;255m"
+   
   boldon="${esc}[1m";    boldoff="${esc}[22m"
   italicson="${esc}[3m"; italicsoff="${esc}[23m"
   ulon="${esc}[4m";      uloff="${esc}[24m"
   invon="${esc}[7m";     invoff="${esc}[27m"
  
-  reset="${esc}[0m"
-}
-
-initializeBars(){
-  f=3 b=4
-  for j in f b; do
-    for i in {0..7}; do
-      printf -v $j$i %b "\e[${!j}${i}m"
-    done
-  done
-  bld=$'\e[1m'
-  rst=$'\e[0m'
-  inv=$'\e[7m'
+  
 }
 
 initializeANSI
-initializeBars
+
 
 cat << EOF
-${reset}                                ${blackf}██████████████████
-${reset}  ${blackf}██████████████████████    ████${reset}${redf}████████████${reset}${whitef}██${reset}${redf}██${reset}${whitef}██${reset}${blackf}██
-${reset}  ${blackf}██${reset}${whitef}██${reset}${redf}██${reset}${whitef}██${reset}${redf}██████████${reset}${blackf}████████████████████${reset}${redf}██${reset}${whiteb}██${reset}${redf}████${reset}${whiteb}██${reset}${blackf}██
-${reset}  ${blackf}██${reset}${whiteb}██${reset}${redf}████${reset}${whitef}██${reset}${redf}████${reset}${blackf}████████████${reset}${blackb}██████████${reset}${blackf}██████${reset}${redf}██${reset}${whiteb}██${reset}${blackf}██
-${reset}    ${blackf}██${reset}${whitef}██${reset}${redf}██${reset}${whiteb}██${reset}${redf}██${reset}${blackf}██████${reset}${blackb}██████████████████████${reset}${blackf}████${reset}${whiteb}██${reset}${blackf}██
-${reset}    ${blackf}██${reset}${whiteb}██${reset}${redf}████${reset}${blackf}██████${reset}${blackb}██████████████████████████${reset}${blackf}████
-${reset}      ${blackf}██${reset}${whiteb}██${reset}${blackf}██████${reset}${blackb}██████████████████████████████${reset}${blackf}████
-${reset}      ${blackf}████████${reset}${blackb}██████████████████████████████████${reset}${blackf}████
-${reset}      ${blackf}████████${reset}${blackb}████████████████████████████████${reset}${whiteb}██${reset}${blackb}██${reset}${blackf}██
-${reset}    ${blackf}██${reset}${blackb}██${reset}${blackf}██████${reset}${blackb}████████████████████████${reset}${blackf}██${reset}${whiteb}██████${reset}${blackb}████${reset}${blackf}████
-${reset}    ${blackf}██${reset}${blackb}████${reset}${blackf}██${reset}${blackb}██████${reset}${blackf}██${reset}${whiteb}████████${reset}${blackb}██${reset}${whiteb}██████${reset}${blackb}██${reset}${blackf}██${reset}${blackb}████████████${reset}${blackf}██
-${reset}    ${blackf}██${reset}${blackb}████${reset}${blackf}██${reset}${blackb}████${reset}${blackf}██${reset}${blackb}██████████${reset}${blackf}██${reset}${blackb}██████${reset}${blackf}████${reset}${blackb}██████${reset}${blackf}██${reset}${blackb}████${reset}${blackf}██
-${reset}    ${blackf}██${reset}${blackb}████${reset}${blackf}██${reset}${blackb}██${reset}${blackf}██${reset}${blackb}██████████${reset}${blackf}████${reset}${blackb}████${reset}${blackf}██████${reset}${blackb}██${reset}${blackf}██${reset}${blackb}██${reset}${blackf}████${reset}${blackb}██${reset}${blackf}██
-${reset}    ${blackf}██${reset}${blackb}████████${reset}${blackf}██${reset}${blackb}████████${reset}${blackf}██████${reset}${blackb}██${reset}${blackf}████${reset}${purplef}██${reset}${blackf}██████${reset}${blackb}██${reset}${blackf}████████
-${reset}      ${blackf}██${reset}${blackb}██████████${reset}${blackf}████████████████${reset}${purplef}██${reset}${humanf}██${reset}${blackf}██${reset}${humanf}██${reset}${blackf}██████████
-${reset}      ${blackf}██${reset}${blackb}████${reset}${blackf}██${reset}${blackb}██████${reset}${blackf}██${reset}${humanf}██${reset}${blackf}████${reset}${purplef}██${reset}${blackf}██${reset}${purplef}██${reset}${humanf}████${reset}${brownf}██${reset}${humanb}██${reset}${redf}██${reset}${blackf}████${reset}  ${blackf}██
-${reset}      ${blackf}██${reset}${blackb}████${reset}${blackf}██████${reset}${redf}████${reset}${humanb}████${reset}${brownf}██${reset}${humanf}██${reset}${purplef}██${reset}${humanf}██████${reset}${brownb}██${reset}${humanb}██${reset}${whitef}██${reset}${blackf}██
-${reset}      ${blackf}██${reset}${blackb}████${reset}${blackf}██████${reset}${whitef}████${reset}${humanb}██${reset}${brownf}██${reset}${brownb}██${reset}${humanf}██████████${reset}${brownf}██${reset}${humanb}██${reset}${redf}██${reset}${blackf}██
-${reset}      ${blackf}██${reset}${blackb}██${reset}${blackf}████████${reset}${redf}████${reset}${boldon}${whitef}██${reset}${brownf}████${reset}${humanf}████████████${reset}${purplef}██${reset}${humanf}██${reset}${blackf}██
-${reset}    ${blackf}████${reset}${blackb}██${reset}${blackf}████████${reset}${humanb}██${reset}${humanf}██${reset}${purplef}██${reset}${humanf}██████████████${reset}${purplef}██${reset}${blackf}██${reset}${blackb}██${reset}${blackf}██              
-${reset}    ${blackf}██████████${reset}${blackb}██${reset}${blackf}████${reset}${blackb}██${reset}${blackf}██${reset}${purplef}██████████████${reset}${blackf}██${reset}${blackb}██${reset}${blackf}██
-${reset}    ${blackf}████████${reset}  ${blackf}██${reset}${blackb}██${reset}${blackf}██${reset}${blackb}██${reset}${purplef}████${reset}${redf}██${reset}${humanf}██████${reset}${yellowf}██${reset}${humanf}██${reset}${purplef}██${reset}${blackf}██
-${reset}      ${blackf}██████${reset}  ${blackf}██${reset}${blackb}██${reset}${blackf}██${reset}${whiteb}██${reset}${humanf}██${reset}${redf}████████${reset}${yellowf}██${reset}${boldon}${yellowf}██${reset}${yellowf}██${reset}${blackf}██${reset}${whiteb}██${reset}${blackf}██
-${reset}      ${blackf}████${reset}      ${blackf}██${reset}${whiteb}██${reset}${whitef}██${reset}${whiteb}██${reset}${redf}████████${reset}${boldon}${yellowf}██████${reset}${blackf}██${reset}${whiteb}██${reset}${blackf}██
-${reset}      ${blackf}██${reset}        ${blackf}██${reset}${whiteb}██${reset}${whitef}████${reset}${blackf}██${reset}${redf}██████████████${reset}${blackf}██${reset}${whiteb}██${reset}${blackf}██
-${reset}              ${blackf}██${reset}${whiteb}██${reset}${redf}██${reset}${whitef}████${reset}${blackf}██${reset}${redf}████████████████${reset}${blackf}██${reset}${blackf}██
-${reset}              ${blackf}██${reset}${whiteb}██${reset}${whitef}██${reset}${redf}██${reset}${whitef}██${reset}${blackf}██${reset}${redf}██████████████████${reset}${blackf}██
-${reset}              ${blackf}██${reset}${redf}██${reset}${whiteb}██${reset}${whitef}██${reset}${whiteb}██${reset}${redf}██████████████████${reset}${whiteb}██${reset}${blackf}██
-${reset}              ${blackf}██${reset}${whiteb}██${reset}${redf}████████████████████${reset}${whiteb}████${reset}${blackf}██
-${reset}                ${blackf}██${reset}${redf}██${reset}${whiteb}████${reset}${whitef}██${reset}${redf}████${reset}${whitef}████${reset}${blackf}████${reset}${blackb}██${reset}${blackf}██
-${reset}                  ${blackf}██████${reset}${blackb}██${reset}${blackf}████████${reset}  ${blackf}████
-
+                                ${border}██████████████████
+  ${border}██████████████████████    ████${redd}██${red}██████████${white}██${redd}██${white}██${border}██
+  ${border}██${white}██${red}██${white}██${red}████████${redd}██${border}████████████████████${red}██${whited}██${redd}████${whited}██${border}██
+  ${border}██${white}██${redd}████${white}██${red}██${redd}██${border}████${grey}████████${greyl}██████████${grey}██${border}████${redd}██${whited}██${border}██
+    ${border}██${white}██${redd}██${whited}██${redd}██${border}██${grey}████${greyl}██████████████████████${grey}██${border}██${whited}██${border}██
+    ${border}██${whited}██${redd}████${border}██${grey}████${greyl}██████████████████████████${grey}██${border}██
+      ${border}██${whited}██${border}██${grey}████${greyl}██████████████████████████████${grey}██${border}██
+      ${border}██${greyd}██${border}██${grey}██${greyl}██████████████████████████████████${grey}██${border}██
+      ${border}██${greyd}████${grey}██${greyl}████████████████████████████████${whited}██${greyl}██${border}██
+    ${border}██${grey}████${greyd}██${greyl}██████████████████████████${greyd}██${whited}██████${greyl}████${greyd}██${border}██
+    ${border}██${grey}████${greyd}██${greyl}██████${grey}██${whited}████████${greyl}██${whited}██████${greyl}██${grey}██${greyl}████████████${border}██
+    ${border}██${grey}████${greyd}██${greyl}████${greyd}██${greyl}██████████${greyd}██${greyl}██████${border}████${greyl}██████${grey}██${greyl}████${border}██
+    ${border}██${grey}████${greyd}██${greyl}██${greyd}██${grey}██${greyl}████████${greyd}████${greyl}████${grey}██${greyd}██${grey}██${greyl}██${grey}██${greyl}██${greyd}██${grey}██${greyl}██${border}██
+    ${border}██${grey}████████${greyd}██${greyl}████████${grey}██${greyd}██${grey}██${greyl}██${grey}██${greyd}██${humand}██${border}████${greyd}██${greyl}██${greyd}████${grey}██${border}██
+      ${border}██${grey}████████${greyl}██${grey}██${greyd}██${border}████████${grey}██${greyd}██${humand}██${humanb}██${border}██${eyed}██${greyd}██${grey}██${greyd}██${border}██${greyd}██
+      ${border}██${grey}████${greyd}██${grey}████${greyl}██${border}██${eyed}██${border}████${humand}██${greyd}██${humand}██${humanb}████${brown}██${human}██${redd}██${grey}██${border}██  ██
+      ${border}██${grey}████${greyd}██████${redd}██${red}██${eye}████${brown}██${humanb}██${humand}██${humanb}██████${brownb}██${eye}██${redd}██${border}██
+      ${border}██${grey}████${border}██${greyd}████${redd}██${red}██${eye}██${brown}██${brownb}██${humanb}██████████${brown}██${humanb}██${redd}██${border}██
+      ${border}██${grey}██${greyd}██${border}██${greyd}████${redd}██${red}██${humanb}██${brown}████${humanb}████████████${humand}██${eyed}██${border}██
+    ${border}██${greyd}██${grey}██${greyd}██${border}██${greyd}████${eye}████${humand}██${humanb}██████████████${humand}██${border}██${greyl}██${border}██              
+    ${border}██${greyd}██████${border}██${eye}██${border}██${grey}██${greyl}██${greyd}██${humand}██████████████${border}██${greyl}██${border}██
+    ${border}██${greyd}████${border}██  ${border}██${eye}██${border}██${greyl}██${humand}████${redd}██${eye}██████${yellowd}██${humanb}██${humand}██${border}██
+      ${border}██${greyd}██${border}██  ██${white}██${border}██${whited}██${white}██${redd}████${red}████${yellowd}██${yellow}██${yellowd}██${border}██${whited}██${border}██
+      ${border}████      ██${whited}██${white}██${whited}██${redd}████${red}████${yellow}██████${border}██${whited}██${border}██
+      ${border}██        ██${whited}██${whited}██${white}██${border}██${redd}██████${red}██████${redd}██${border}██${whited}██${border}██
+              ${border}██${whited}██${redd}██${white}████${border}██${redd}████${red}██████████${redd}██${border}████
+              ${border}██${whited}██${white}██${redd}██${white}██${border}██${redd}████${red}████████████${redd}██${border}██
+              ${border}██${redd}██${whited}██${white}██${whited}██${redd}████${red}██████████████${whited}██${border}██
+              ${border}██${whited}██${redd}████████${red}████████████${whited}████${border}██
+                ${border}██${redd}██${whited}████${white}██${red}████${white}████${border}██${greyd}██${grey}██${border}██
+                  ${border}████${grey}██${greyl}██${border}████████  ${border}████
+                      ${border}████
 EOF
