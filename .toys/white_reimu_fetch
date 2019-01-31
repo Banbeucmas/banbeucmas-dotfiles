@@ -10,14 +10,14 @@ initializeANSI()
 
   border="${esc}[38;5;232m"
   greyd="${esc}[38;5;234m"; grey="${esc}[38;5;235m"; greyl="${esc}[38;5;240m"
-  cloth="${esc}[30m";    clothd="${esc}[90m"
+  cloth="${esc}[38;5;247m";    clothd="${esc}[38;5;249m"
   whited="${esc}[38;5;251m"; white="${esc}[38;5;255m"
   humand="${esc}[38;5;216m"; human="${esc}[38;5;223m"; humanb="${esc}[38;5;229m"
   yellowd="${esc}[38;5;214m"; yellow="${esc}[38;5;226m" 
   brown="${esc}[38;5;130m"; brownb="${esc}[38;5;214m";  
   eyed="${esc}[38;5;251m"; eye="${esc}[38;5;255m"
 
-  system="${esc}[30m"; 
+  system="${esc}[37m"; 
 
   boldon="${esc}[1m";    boldoff="${esc}[22m"
   italicson="${esc}[3m"; italicsoff="${esc}[23m"
