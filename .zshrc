@@ -16,6 +16,7 @@ export TERM=xterm-256color
 PROMPT='%F{12}%n%f@%f%m%f %F{12}%1~%f '
 
 alias toys="~/.scripts/toys"
+alias patchart="~/.scripts/patchart"
 alias showoff="~/.scripts/showoff"
 alias savedot="~/.scripts/dotsave"
 alias refresh="source ~/.zshrc"

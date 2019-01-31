@@ -1,0 +1,21 @@
+#!/bin/sh
+
+if [ "$1" == "-h" ]; then
+    echo "COMMAND: patchart [OPTIONS] [SCRIPTS]"
+    echo ""
+    echo "-h        Display this page"
+    echo "-l        List all avaliable scripts" 
+    exit 0
+elif [ "$1" == "-l" ]; then
+    ls ~/.patchart
+    exit 0
+fi
+
+
+if [ ! -f ~/.patchart/$1 ]; then
+    echo "Art doesn't excist" 
+else
+    clear
+    ~/.patchart/$1
+fi
+    
