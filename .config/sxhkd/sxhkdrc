@@ -145,6 +145,17 @@ XF86Audio{Raise,Lower}Volume
 XF86AudioMute
     amixer set Master toggle
 
+XF86Audio{Prev,Next}
+    mpc {prev,next}
+
+XF86AudioPlay
+    ~/.scripts/mpdcontrol
+
+Print
+    xfce4-screenshooter -r
+
+
+
 super + alt + b + {0, 9}
     xbacklight -set {0, 100}
 
