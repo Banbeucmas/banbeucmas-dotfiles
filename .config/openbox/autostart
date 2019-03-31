@@ -1,0 +1,6 @@
+sleep 5s && kalu &
+nitrogen --restore &
+volumeicon &
+compton --config ~/.config/compton.conf -b &
+tint2 &
+lxpolkit &
