@@ -1,3 +1,7 @@
+
+::root{
+  -main-bg: #353945
+}
 ::-webkit-scrollbar-thumb
 {
   background-color: #262b36 !important;

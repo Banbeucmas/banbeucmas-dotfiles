@@ -13,7 +13,7 @@ compinit
 
 export TERM=xterm-256color
 
-PROMPT='%F{12}%n%f@%f%m%f %F{12}%1~%f '
+PROMPT='%F{1}%n%f@%f%m%f %F{1}%8~%f '
 
 alias toys="~/.scripts/toys"
 alias patchart="~/.scripts/patchart"
@@ -22,5 +22,6 @@ alias savedot="~/.scripts/dotsave"
 alias refresh="source ~/.zshrc"
 alias update="yay -Syu"
 alias toufetch="~/.toys/blue_reimu_fetch"
+alias mpd_albumcover="~/.scripts/mpd_albumcover"
 
 #alias $DOT_CONFIG ="/mnt/Storages_Linux/Dotfiles/.config"

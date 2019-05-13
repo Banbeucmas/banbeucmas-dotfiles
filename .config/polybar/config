@@ -18,7 +18,7 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #383c4a
+background = ${xrdb:polybar.background}
 background-alt = ${xrdb:polybar.background-alt}
 ;foreground = ${xrdb:color7:#222}
 foreground = ${xrdb:polybar.foreground}
@@ -34,8 +34,12 @@ bar_height=24
 mpd_host=127.0.0.1
 mpd_port=6600
 
-[bar/bar]
-include-file = /mnt/Storages_Linux/Dotfiles/.config/polybar/bars/main_bar
+[bar/left_bar]
+include-file = /mnt/Storages_Linux/Dotfiles/.config/polybar/bars/left_bar
+
+[bar/right_bar]
+include-file = /mnt/Storages_Linux/Dotfiles/.config/polybar/bars/right_bar
+
 
 [bar/sub_bar]
 include-file = /mnt/Storages_Linux/Dotfiles/.config/polybar/bars/sub_bar
@@ -80,15 +84,15 @@ format = <label-state>
 
 label-focused =ﱢ
 label-focused-font = 3
-label-focused-background = ${colors.background-alt}
-label-focused-foreground = 	#eee
+label-focused-background = ${colors.background}
+label-focused-foreground = 	#7eaad6
 label-focused-underline= ${colors.underline}
 label-focused-padding-right = 1
 
 label-occupied =ﱢ
 label-occupied-font = 3
-label-occupied-background = ${colors.background-alt}
-label-occupied-foreground = #8a9cad
+label-occupied-background = ${colors.background}
+label-occupied-foreground = ${colors.background-alt}
 label-occupied-padding-right = 1
 
 
@@ -99,8 +103,8 @@ label-urgent-padding-right = 1
 
 label-empty = %icon%
 label-empty-font = 3
-label-empty-background = ${colors.background-alt}
-label-empty-foreground = #eee
+label-empty-background = ${colors.background}
+label-empty-foreground = ${colors.background-alt}
 label-empty-padding-right = 1
 
 [module/updates]
@@ -108,6 +112,7 @@ type = custom/script
 exec = /mnt/Storages_Linux/Dotfiles/.config/polybar/scripts/updates_arch.sh
 interval = 600
 format-background = ${colors.background-alt}
+format-foreground = ${colors.foreground-alt}
 
 [module/github]
 type = custom/script
@@ -126,7 +131,8 @@ type = internal/xbacklight
 
 format = <label>
 format-background = ${colors.background-alt}
-label =  %percentage%%
+format-foreground = ${colors.foreground-alt}
+label = " %percentage%% "
 label-padding = 0
 label-underline = ${colors.underline}
 
@@ -137,18 +143,18 @@ interval = 5
 label-background = ${colors.background}
 label-foreground = ${colors.foreground}
 
-date = %a, %d %b %Y
-time = %H:%M
+date = %d %b %Y %H:%M
+time = 
 
-label = %date%
+label = %time% %date%
 
-format-padding = 1
+format-padding-right = 1
 
 [module/hour]
 type = internal/date
 interval = 5
 
-label-background = ${colors.background-alt}
+label-background = ${colors.background}
 label-foreground = ${colors.foreground}
 
 time = %H:%M
@@ -181,17 +187,20 @@ full-at = 99
 format-charging = <animation-charging> <label-charging>
 format-charging-underline = ${colors.underline}
 format-charging-background = ${colors.background-alt}
+format-charging-foreground = ${colors.foreground-alt}
 
 
 format-discharging = <animation-discharging> <label-discharging>
 format-discharging-underline = ${colors.underline}
 format-discharging-background = ${colors.background-alt}
+format-discharging-foreground = ${colors.foreground-alt}
 
 
 format-full-prefix = " "
-format-full-prefix-foreground = ${colors.white}
+format-full-prefix-foreground = ${colors.foreground-alt}
 format-full-underline = ${colors.underline}
 format-full-background = ${colors.background-alt}
+format-full-foreground = ${colors.foreground-alt}
 
 
 format-full-padding = 1
@@ -202,20 +211,20 @@ ramp-capacity-0 = 
 ramp-capacity-1 = 
 ramp-capacity-2 = 
 ramp-capacity-3 = 
-ramp-capacity-foreground = ${colors.white}
+ramp-capacity-foreground = ${colors.foreground-alt}
 
 animation-charging-0 = 
 animation-charging-1 = 
 animation-charging-2 = 
 animation-charging-3 = 
-animation-charging-foreground = ${colors.white}
+animation-charging-foreground = ${colors.foreground-alt}
 animation-charging-framerate = 750
 
 animation-discharging-0 = 
 animation-discharging-1 = 
 animation-discharging-2 = 
 animation-discharging-3 = 
-animation-discharging-foreground = ${colors.white}
+animation-discharging-foreground = ${colors.foreground-alt}
 animation-discharging-framerate = 750
 
 [module/mpd]

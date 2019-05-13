@@ -1,0 +1,6 @@
+#!/bin/bash
+
+mkdir alac;
+for f in ./*.flac; do
+    
+done

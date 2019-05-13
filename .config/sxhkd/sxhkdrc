@@ -8,10 +8,10 @@ alt + shift + Return
 
 # program launcher
 alt + d
-	rofi -show drun -font "t cherry 9" 
+	rofi -show drun -font "t cherry 9" -width 40 -lines 9
 
 alt + a
-    rofi -show ssh -font "t cherry 9"
+    rofi -show ssh -font "t cherry 9"  -width 40 -lines 9
 
 
 # make sxhkd reload its configuration files:
@@ -106,12 +106,8 @@ super + shift + {1, 2}
 alt + ctrl + {j,i,k,l}
 	bspc node -p {west,south,north,east}
 
-# preselect the ratio
-alt + ctrl + {1-9}
-	bspc node -o 0.{1-9}
-
 # cancel the preselection for the focused node
-alt + ctrl + space
+alt + ctrl + 0
 	bspc node -p cancel
 
 # cancel the preselection for the focused desktop
@@ -140,16 +136,16 @@ alt + e
 
 #Utility Keys
 XF86Audio{Raise,Lower}Volume
-    amixer set Master 1%{+,-}
+    ~/.scripts/changevolume 6.67%{+,-}
 
 XF86AudioMute
     amixer set Master toggle
 
 XF86Audio{Prev,Next}
-    mpc {prev,next}
+    mpc {prev,next} & ~/.scripts/mpddunst
 
 XF86AudioPlay
-    ~/.scripts/mpdcontrol
+    ~/.scripts/mpdcontrol && ~/.scripts/mpddunst
 
 Print
     xfce4-screenshooter -r
