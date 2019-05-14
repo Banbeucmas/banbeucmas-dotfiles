@@ -165,7 +165,7 @@
     max_icon_size = 32
 
     # Paths to default icons.
-    icon_path = /usr/share/icons/Papirus-Light/16x16/panel/:/usr/share/icons/Papirus-Light/24x24/panel/
+    icon_path = /usr/share/icons/Papirus-Light-Custom/16x16/panel/:/usr/share/icons/Papirus-Custom/24x24/panel/
 
     ### History ###
 

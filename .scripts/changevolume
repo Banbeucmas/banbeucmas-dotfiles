@@ -12,10 +12,10 @@
  mute="$(amixer -c 0 get Master | tail -1 | awk '{print $6}' | sed 's/[^a-z]*//g')"
  if [[ $volume == 0 || "$mute" == "off" ]]; then
      # Show the sound muted notification
-     dunstify -a "changeVolume" -u low -i audio-volume-muted -r "$msgId" "Volume muted" 
+     dunstify -a "changeVolume" -u low -i volume-level-muted-pink -r "$msgId" "Volume muted" 
  else
      # Show the volume notification
-     dunstify -a "changeVolume" -u low -i audio-volume-high -r "$msgId" \
+     dunstify -a "changeVolume" -u low -i volume-level-high-pink -r "$msgId" \
      "${volume}%" "$(~/.scripts/getprogressstring 15 "" "" $volume)"
  fi
  # Play the volume changed sound
