@@ -1,0 +1,9 @@
+#!/bin/bash
+
+result=$(echo '{ "command": ["get_property", "pause"] }' | socat - /tmp/mpvsocket)
+
+if [[ $result == *'false'* ]]; then
+    echo "Animation played";
+else
+    echo "Animation stopped";
+fi

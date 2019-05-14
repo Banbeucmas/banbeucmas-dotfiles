@@ -161,4 +161,4 @@ super + q
     ~/.scripts/mpdmenu
 
 super + w
-	~/.scripts/animation_pause
+    ~/.scripts/animation_pause
