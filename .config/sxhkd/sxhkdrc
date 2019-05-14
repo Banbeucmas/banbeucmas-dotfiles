@@ -152,9 +152,13 @@ Print
 
 
 
+
 super + alt + b + {0, 9}
     xbacklight -set {0, 100}
 
 #Program Keys
 super + q 
     ~/.scripts/mpdmenu
+
+super + w
+	~/.scripts/animation_pause

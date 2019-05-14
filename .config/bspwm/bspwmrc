@@ -39,4 +39,5 @@ bspc rule -a xst-256color:xst-panes state=floating
 bspc rule -a xst-256color:xst-ttyclock state=floating
 bspc rule -a xst-256color:xst-ncmpcpp state=floating
 
-sleep 1 && mpc add / && nitrogen --restore && ~/.config/polybar/launch.sh & 
+# sleep 1 && mpc add / && nitrogen --restore && ~/.config/polybar/launch.sh & 
+mpc add / && ~/.config/polybar/launch.sh & ~/.scripts/animated_wallpaper ~/Pictures/Wallpapers/Reimu.mp4 &
