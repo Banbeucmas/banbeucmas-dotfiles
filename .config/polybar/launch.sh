@@ -13,8 +13,9 @@ if [[ $(xrandr | grep eDP1) == *'eDP1 connected'* ]]; then
     echo "Main bar launched..."
 fi
 
-if [[ $(xrandr | grep HDMI1) == *'HDMI1 connected'* ]]; then
-    polybar -r sub_bar &
-    echo "Sub bar launched"
-fi
+#
+#if [[ $(xrandr | grep HDMI1) == *'HDMI1 connected'* ]]; then
+#    polybar -r sub_bar &
+#    echo "Sub bar launched"
+#fi
 
