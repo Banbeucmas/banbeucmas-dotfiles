@@ -17,3 +17,8 @@
 * Music player: MPD with ncmpcpp
 * Song playing in BG: [祝言
 ](https://www.youtube.com/watch?v=2oV92CvzWes) by [凋叶棕 - RD Sounds](https://twitter.com/rdwithleaf) [feat. めらみぽっぷ](https://twitter.com/cosmopolitan093). 
+
+# Bonus
+My best try on discord light theme
+
+![Discord Light theme custom](https://github.com/Banbeucmas/banbeucmas-dotfiles/blob/master/Screenshot/Screenshot_2019-05-28_12-50-49.png)
