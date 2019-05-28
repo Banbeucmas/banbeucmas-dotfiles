@@ -44,12 +44,17 @@ banbeuc iconButtonDefault-2cKx7- iconButton-3V4WS5 button-2b6hmh small--aHOfS {
 .theme-light .divider-3gKybi.dividerRed-MKoLlr .dividerContent-2L12VI{
     background-color: #d4d4d4; 
     border-radius: 4px;
+    padding: 0px 10px 0px 10px;
     margin: 0px 10px 0px 10px;
 }
 
 .theme-light .wrapper-3WhCwL{
     color: #ff4d4d;
     background-color: #d4d4d4;
+}
+
+.theme-dark .button-OhfaWu.selected-wSa2KV, .theme-light .button-OhfaWu.selected-wSa2KV{
+    background-color: var(--rice-color);
 }
 
 .theme-light .textArea-2Spzkt {
@@ -141,8 +146,9 @@ banbeuc iconButtonDefault-2cKx7- iconButton-3V4WS5 button-2b6hmh small--aHOfS {
 }
 
 .username-_4ZSMR {
-    border: 3px solid #4d4d4d;
-    background-color: #4d4d4d;
+    border: 3px solid #e7e8eb;
+    background-color: #e7e8eb;
+    text-shadow: 1px 1px #00000070;
     border-radius: 4px;
     display: inline-block;
 }
