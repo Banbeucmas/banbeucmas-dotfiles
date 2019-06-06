@@ -2,3 +2,4 @@
 .config/nitrogen/bg-saved.cfg
 .config/htop/htoprc
 .config/gtk-2.0/gtkfilechooser.ini
+.config/polybar/scripts/data/
