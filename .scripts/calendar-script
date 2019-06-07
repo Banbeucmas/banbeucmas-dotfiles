@@ -1,0 +1,19 @@
+#!/bin/bash
+read -r d m y k < <(printf  '%(%e %m %Y)T 0033614625035' -1)
+
+((l=y%4?0:1,yc=(${y:2}+(${y:2}/4))%7,s=(yc+${k:m:1}+6+1-l)%7%7,ds=m==2&&l?28:29))
+
+[[ $m == 0[469] || $m == 11 ]] && ((ds=30))
+
+printf '\e[48;5;9m\e[30m      %(%B)T %s     \e[49m\e[39m\nSu Mo Tu We Th Fr Sa\n' -1 "$y"
+
+for ((;i++<${ds:-31};)) {
+    ((i==1)) && printf "%$((s*3))s"
+    ((i==d)) && printf '\e[48;5;9m\e[30m'
+
+    printf '%2s\e[m ' "$i"
+
+    ((i==ds||(i+s)%7)) || printf '\n'
+}
+
+printf '\n\n'

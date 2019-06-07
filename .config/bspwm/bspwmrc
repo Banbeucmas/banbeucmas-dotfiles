@@ -37,7 +37,7 @@ bspc rule -a Screenkey manage=off
 # 2 monitor rules
 if [[ $(xrandr | grep HDMI1) == *'HDMI1 connected'* ]]; then
     bspc rule -a discord monitor='HDMI1'
-    bspc rule -a TelegramDesktop desktop='HDMI1'
+    bspc rule -a TelegramDesktop monitor='HDMI1'
 else
     bspc rule -a discord desktop='^3'
     bspc rule -a TelegramDesktop desktop='^3'
@@ -48,6 +48,8 @@ bspc rule -a xst-256color:xst-neofetch state=floating
 bspc rule -a xst-256color:xst-panes state=floating
 bspc rule -a xst-256color:xst-ttyclock state=floating
 bspc rule -a xst-256color:xst-ncmpcpp state=floating
+bspc rule -a xst-256color:xst-calendar state=floating focus=off monitor='eDP1'
+
 
 # sleep 1 && mpc add / && nitrogen --restore && ~/.config/polybar/launch.sh & 
 mpc add / && nitrogen --restore && ~/.config/polybar/launch.sh &

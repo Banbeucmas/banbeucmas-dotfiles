@@ -1,9 +1,9 @@
 monitor = HDMI1
-width = 100%
+width = 42%
 height = ${variables.bar_height}
-offset-y = 0
-offset-x = 0
-fixed-center = true
+offset-y = 10
+offset-x = 10
+fixed-center = false
 bottom = false
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -11,7 +11,9 @@ foreground = ${colors.foreground}
 font-0 = "t cherry Wide:size=13:style=Regular;1"
 font-1 = "InconsolataGo Nerd Font Mono:size=16:style=Regular;2"
 font-2 = "InconsolataGo Nerd Font Mono:size=18:style=Regular;2"
+font-3 = "Noto Sans CJK JP:size=8:antialias=false;1"
 
-modules-left = background-alt ram cpu 
-modules-center = reddit github
-modules-right = wireless-network wired-network
+
+modules-left = mpd 
+; modules-center = reddit github
+modules-right = mpd_progress

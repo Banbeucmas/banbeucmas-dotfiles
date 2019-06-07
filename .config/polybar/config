@@ -143,24 +143,32 @@ interval = 5
 label-background = ${colors.background}
 label-foreground = ${colors.foreground}
 
-date = %d %b %Y %H:%M
+date = "%d %b %Y "
 time = 
 
 label = %time% %date%
 
 format-padding-right = 1
 
+
 [module/hour]
-type = internal/date
-interval = 5
+type = custom/script
+exec = ~/.config/polybar/scripts/time_animated.sh
 
-label-background = ${colors.background}
-label-foreground = ${colors.foreground}
+interval = 1
+click-left=~/.scripts/calendar-popup
 
-time = %H:%M
+;[module/hour]
+;type = internal/date
+;interval = 5
 
-label = %time%
-label-padding = 1
+;label-background = ${colors.background}
+;label-foreground = ${colors.foreground}
+
+;time = %H:%M
+
+;label = %time%
+;label-padding = 1
 
 [module/pulseaudio]
 type = internal/pulseaudio
@@ -227,6 +235,25 @@ animation-discharging-3 = 
 animation-discharging-foreground = ${colors.foreground-alt}
 animation-discharging-framerate = 750
 
+[module/mpd_progress]
+type = internal/mpd
+host = ${variables.mpd_host}
+port = ${variables.mpd_port}
+
+interval = 0.8
+label-time = %elapsed%/%total%
+
+bar-progress-width = 5
+bar-progress-indicator = ━
+bar-progress-fill = ━	
+bar-progress-empty = ━	
+
+bar-progress-fill-foreground = ${colors.background-alt}
+bar-progress-indicator-foreground = ${colors.background-alt}
+
+format-online = <bar-progress> <label-time> 
+format-online-padding = 1
+
 [module/mpd]
 type = internal/mpd
 
@@ -235,17 +262,30 @@ port = ${variables.mpd_port}
 
 interval = 1
 
-format-online = <label-song>
-format-stopped = "ﱘ No song playing"
+format-online = <icon-prev> <icon-play> <icon-pause> <icon-next> <label-song>
+format-stopped = <icon-prev> <icon-play> <icon-pause> <icon-next>  ﱘ 
 format-offline = <label-offline>
+
+format-online-background = ${colors.background-alt}
 
 
 format-online-padding = 1
 format-stopped-padding = 1
 format-offline-padding = 1
 
-label-song-foreground = ${colors.white}
-label-song = "ﱘ %artist% - %title:0:30:...%"
+icon-play = 
+icon-pause = 
+icon-next = 怜
+icon-prev = 玲
+
+icon-play-foreground = ${colors.foreground-alt}
+icon-pause-foreground = ${colors.foreground-alt}
+icon-next-foreground = ${colors.foreground-alt}
+icon-prev-foreground = ${colors.foreground-alt}
+
+label-song-foreground = ${colors.foreground}
+label-song-background = ${colors.background}
+label-song = " ﱘ %artist% - %title:0:30:...%"
 
 label-offline = "ﱘ MPD is dead T_T"
 
