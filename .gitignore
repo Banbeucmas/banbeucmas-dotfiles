@@ -1,5 +1,5 @@
-/.config/polybar/scripts/
 !.config/polybar/scripts/ibus_language.sh
+/.config/polybar/scripts/
 .config/nitrogen/bg-saved.cfg
 .config/htop/htoprc
 .config/gtk-2.0/gtkfilechooser.ini
