@@ -1,5 +1,5 @@
 monitor = eDP1
-width = 12.7%
+width = 13.7%
 height = ${variables.bar_height}
 offset-y = 10
 offset-x = 10
@@ -27,7 +27,7 @@ font-1 = "InconsolataGo Nerd Font Mono:size=18:style=Regular;3"
 font-2 = "InconsolataGo Nerd Font Mono:size=14:style=Regular;2"
 font-3 = "Noto Sans CJK JP:size=8:antialias=false;1"
 
-modules-left = battery date hour
+modules-left = battery language date hour
 ;modules-center = username
 ;modules-right = hour date background-alt bspwm  
 

@@ -25,6 +25,7 @@ st.color17: #7c818c
 
 polybar.background: #ffffff
 polybar.background-alt: #ff8787
+polybar.background-alt-1: #ffa5a5
 polybar.foreground: #6d6d6d
 polybar.foreground-alt: #ffffff
 

@@ -20,6 +20,7 @@
 ;background = ${xrdb:color0:#222}
 background = ${xrdb:polybar.background}
 background-alt = ${xrdb:polybar.background-alt}
+background-alt-1 = ${xrdb:polybar.background-alt-1}
 ;foreground = ${xrdb:color7:#222}
 foreground = ${xrdb:polybar.foreground}
 foreground-alt = ${xrdb:polybar.foreground-alt}
@@ -150,13 +151,23 @@ label = %time% %date%
 
 format-padding-right = 1
 
+[module/language]
+type = custom/script
+exec = ~/.config/polybar/scripts/ibus_language.sh
+tail = true
+
+format-background = ${colors.background-alt-1}
+format-foreground = ${colors.foreground-alt}
+format-padding = 1
+
+interval = 0
 
 [module/hour]
 type = custom/script
 exec = ~/.config/polybar/scripts/time_animated.sh
 
 interval = 1
-click-left=~/.scripts/calendar-popup
+click-left= ~/.scripts/calendar-popup
 
 ;[module/hour]
 ;type = internal/date
@@ -196,12 +207,12 @@ format-charging = <animation-charging> <label-charging>
 format-charging-underline = ${colors.underline}
 format-charging-background = ${colors.background-alt}
 format-charging-foreground = ${colors.foreground-alt}
-
+label-charging-foreground = ${colors.foreground-alt}
 
 format-discharging = <animation-discharging> <label-discharging>
-format-discharging-underline = ${colors.underline}
 format-discharging-background = ${colors.background-alt}
 format-discharging-foreground = ${colors.foreground-alt}
+label-discharging-foreground = ${colors.foreground-alt}
 
 
 format-full-prefix = " "
