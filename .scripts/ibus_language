@@ -1,0 +1,11 @@
+#!/bin/sh
+
+engine=$(ibus engine)
+
+if [ $engine == "Bamboo" ] || [ $engine == "teni" ] || [ $engine = "Unikey" ]; then
+    echo "vn";
+elif [ $engine == "mozc-jp" ]; then
+    echo "jp";
+else
+    echo "en";
+fi
