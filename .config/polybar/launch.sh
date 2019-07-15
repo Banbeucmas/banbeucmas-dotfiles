@@ -9,7 +9,7 @@ while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 # Launch bar1 and bar2
 
 if [[ $(xrandr | grep eDP1) == *'eDP1 connected'* ]]; then
-    polybar -r left_bar & polybar -r right_bar &
+    polybar -r battery_bar & polybar -r language_bar & polybar -r time_bar & polybar -r right_bar & polybar -r username_bar
     echo "Main bar launched..."
 fi
 

@@ -2,30 +2,48 @@ st.font: t cherry wide:pixelsize=12:antialias=false:autohint=true;
 
 st.shell: /bin/zsh
 
-st.background: #ffffff
-st.foreground: #6d6d6d
-st.color0: #ffffff
-st.color1: #ff3f3f
-st.color2: #a3bd8d
-st.color3: #c29810
-st.color4: #7eaad6
-st.color5: #ec7285
-st.color6: #88d0ba
-st.color7: #6d6d6d
-st.color8: #e5dcdc
-st.color9: #ff8787
-st.color10: #93ad7d
-st.color11: #f5ed4c
-st.color12: #7091b0
-st.color13: #ffc6cf
-st.color14: #7dbaa8
-st.color15: #2d2d2d
-st.color16: #404552
-st.color17: #7c818c
+! special
+st.foreground:   #ffffff
+st.background:   #302f2f
+st.cursorColor:  #ffffff
 
-polybar.background: #ffffff
-polybar.background-alt: #ff8787
-polybar.background-alt-1: #ffa5a5
-polybar.foreground: #6d6d6d
-polybar.foreground-alt: #ffffff
+! black
+st.color0:       #302f2f
+st.color8:       #424141
+
+! red
+st.color1:       #f35a5a
+st.color9:       #ffa6a6
+
+! green
+st.color2:       #86ae5c
+st.color10:      #93ad7d
+
+! yellow
+st.color3:       #e6b681
+st.color11:      #ffecba
+
+! blue
+st.color4:       #83b1e0
+st.color12:      #9cb7cf
+
+! magenta
+st.color5:       #ec7285
+st.color13:      #ffc6cf
+
+! cyan
+st.color6:       #88d0ba
+st.color14:      #a5d8c9
+
+! white
+st.color7:       #6d6d6d
+st.color15:      #ffffff
+
+
+
+polybar.background: #302f2f
+polybar.background-alt: #e4b580
+polybar.background-alt-1: #ffecba
+polybar.foreground: #ffffff
+polybar.foreground-alt: #ffecba
 

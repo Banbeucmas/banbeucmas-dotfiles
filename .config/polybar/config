@@ -35,8 +35,22 @@ bar_height=24
 mpd_host=127.0.0.1
 mpd_port=6600
 
-[bar/left_bar]
-include-file = /mnt/Storages_Linux/Dotfiles/.config/polybar/bars/left_bar
+[bar/battery_bar]
+include-file = /mnt/Storages_Linux/Dotfiles/.config/polybar/bars/main_bar_battery
+
+[bar/language_bar]
+include-file = /mnt/Storages_Linux/Dotfiles/.config/polybar/bars/main_bar_language
+
+[bar/time_bar]
+include-file = /mnt/Storages_Linux/Dotfiles/.config/polybar/bars/main_bar_time
+
+
+[bar/username_bar]
+include-file = /mnt/Storages_Linux/Dotfiles/.config/polybar/bars/main_bar_username
+
+
+;[bar/left_bar]
+;include-file = /mnt/Storages_Linux/Dotfiles/.config/polybar/bars/left_bar
 
 [bar/right_bar]
 include-file = /mnt/Storages_Linux/Dotfiles/.config/polybar/bars/right_bar
@@ -45,6 +59,26 @@ include-file = /mnt/Storages_Linux/Dotfiles/.config/polybar/bars/right_bar
 [bar/sub_bar]
 include-file = /mnt/Storages_Linux/Dotfiles/.config/polybar/bars/sub_bar
 
+[module/music_icon]
+type = custom/text
+content = "ﱘ"
+content-padding = 1
+content-background = ${colors.background-alt}
+content-foreground = ${colors.foreground}
+
+[module/time_icon]
+type = custom/text
+content = ""
+content-padding = 1
+content-background = ${colors.background-alt}
+content-foreground = ${colors.foreground}
+
+[module/language_icon]
+type = custom/text
+content = ""
+content-padding = 1
+content-background = ${colors.background-alt}
+content-foreground = ${colors.foreground}
 
 [module/background-alt]
 type = custom/text
@@ -86,7 +120,7 @@ format = <label-state>
 label-focused =ﱢ
 label-focused-font = 3
 label-focused-background = ${colors.background}
-label-focused-foreground = 	#7eaad6
+label-focused-foreground = 	${colors.background-alt-1}
 label-focused-underline= ${colors.underline}
 label-focused-padding-right = 1
 
@@ -156,8 +190,8 @@ type = custom/script
 exec = ~/.config/polybar/scripts/ibus_language.sh
 tail = true
 
-format-background = ${colors.background-alt-1}
-format-foreground = ${colors.foreground-alt}
+;format-background = ${colors.background-alt-1}
+format-foreground = ${colors.foreground}
 format-padding = 1
 
 interval = 0
@@ -206,25 +240,27 @@ full-at = 99
 format-charging = <animation-charging> <label-charging>
 format-charging-underline = ${colors.underline}
 format-charging-background = ${colors.background-alt}
-format-charging-foreground = ${colors.foreground-alt}
-label-charging-foreground = ${colors.foreground-alt}
+format-charging-foreground = ${colors.foreground}
+label-charging-foreground = ${colors.foreground}
 
 format-discharging = <animation-discharging> <label-discharging>
 format-discharging-background = ${colors.background-alt}
-format-discharging-foreground = ${colors.foreground-alt}
-label-discharging-foreground = ${colors.foreground-alt}
+format-discharging-foreground = ${colors.foreground}
+label-discharging-foreground = ${colors.foreground}
 
 
-format-full-prefix = " "
-format-full-prefix-foreground = ${colors.foreground-alt}
+format-full-prefix = "  "
+format-full-prefix-foreground = ${colors.foreground}
+format-full-prefix-background = ${colors.background-alt}
 format-full-underline = ${colors.underline}
-format-full-background = ${colors.background-alt}
-format-full-foreground = ${colors.foreground-alt}
+format-full-background = ${colors.background}
+format-full-foreground = ${colors.foreground}
 
 
-format-full-padding = 1
-format-discharging-padding = 1
-format-charging-padding = 1
+format-full-padding-right = 1
+label-full-padding = 1
+format-discharging-padding-right = 1
+format-charging-padding-right = 1
 
 ramp-capacity-0 = 
 ramp-capacity-1 = 
@@ -273,16 +309,18 @@ port = ${variables.mpd_port}
 
 interval = 1
 
-format-online = <icon-prev> <icon-play> <icon-pause> <icon-next> <label-song>
-format-stopped = <icon-prev> <icon-play> <icon-pause> <icon-next>  ﱘ 
+;format-online = <icon-prev> <icon-play> <icon-pause> <icon-next> <label-song>
+format-online = <label-song> 
+;format-stopped = <icon-prev> <icon-play> <icon-pause> <icon-next>  ﱘ 
+
 format-offline = <label-offline>
 
-format-online-background = ${colors.background-alt}
+format-online-background = ${colors.background}
 
 
-format-online-padding = 1
-format-stopped-padding = 1
-format-offline-padding = 1
+format-online-padding = 0
+format-stopped-padding = 0
+format-offline-padding = 0
 
 icon-play = 
 icon-pause = 
@@ -294,11 +332,11 @@ icon-pause-foreground = ${colors.foreground-alt}
 icon-next-foreground = ${colors.foreground-alt}
 icon-prev-foreground = ${colors.foreground-alt}
 
-label-song-foreground = ${colors.foreground}
+;label-song-foreground = ${colors.foreground}
 label-song-background = ${colors.background}
-label-song = " ﱘ %artist% - %title:0:30:...%"
+label-song = "%artist% - %title:0:22:...% "
 
-label-offline = "ﱘ MPD is dead T_T"
+label-offline = "MPD is dead T_T"
 
 [module/cpu]
 type = internal/cpu

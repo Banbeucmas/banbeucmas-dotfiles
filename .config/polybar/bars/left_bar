@@ -1,5 +1,5 @@
-monitor = eDP1
-width = 13.7%
+monitor = HDMI1
+width = 14%
 height = ${variables.bar_height}
 offset-y = 10
 offset-x = 10

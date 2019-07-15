@@ -94,9 +94,9 @@ alt + shift + q
 
 # focus or send to the given desktop of monitor
 super + {1, 2}
-    bspc monitor -f {eDP1, HDMI1}
+    bspc monitor -f {HDMI1, eDP1}
 super + shift + {1, 2}
-    bspc node -m {eDP1, HDMI1}
+    bspc node -m {HDMI1, eDP1}
 
 #
 # preselect

@@ -5,11 +5,11 @@ read -r d m y k < <(printf  '%(%e %m %Y)T 0033614625035' -1)
 
 [[ $m == 0[469] || $m == 11 ]] && ((ds=30))
 
-printf '\e[48;5;9m\e[30m      %(%B)T %s     \e[49m\e[39m\nSu Mo Tu We Th Fr Sa\n' -1 "$y"
+printf '\e[48;5;3m\e[39m      %(%B)T %s     \e[49m\e[39m\nSu Mo Tu We Th Fr Sa\n' -1 "$y"
 
 for ((;i++<${ds:-31};)) {
     ((i==1)) && printf "%$((s*3))s"
-    ((i==d)) && printf '\e[48;5;9m\e[30m'
+    ((i==d)) && printf '\e[48;5;3m\e[39m'
 
     printf '%2s\e[m ' "$i"
 

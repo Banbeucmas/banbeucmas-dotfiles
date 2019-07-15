@@ -1,3 +1,4 @@
 #!/bin/sh
 
-xst -n xst-calendar -g 21x10+34+37 -e zsh -c "tput civis & ~/.scripts/calendar-script && sleep 3"
+killall xst-calendar &
+xst -n xst-calendar -g 21x10+10+37 -e zsh -c "tput civis & ~/.scripts/calendar-script && sleep 3"
